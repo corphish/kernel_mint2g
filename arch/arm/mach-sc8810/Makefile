@@ -52,7 +52,7 @@ sprdboarddirs := $(patsubst %,arch/arm/mach-sc8810/%,$(sprdboard-y))
 # all compiler warnings in here are treated as errors from now on
 # expect declration after statements, long live c90
 # make sure any modifications to defconfig or source files passesi this -psych.half
-KBUILD_CPPFLAGS += $(patsubst %,-I%,$(sprdboarddirs)) -Werror -Wno-error=declaration-after-statement
+KBUILD_CPPFLAGS += $(patsubst %,-I%,$(sprdboarddirs))
 
 # remove warnings for variables, you got them right spreadtrum -psych.half
 #$(warning $(sprdboarddirs))
